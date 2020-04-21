@@ -13,6 +13,7 @@
             android:id="@+id/textLogin"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
             android:layout_marginBottom="25dp"
             android:text="Login"
             android:textAlignment="center"
@@ -56,6 +57,7 @@
             android:hint="password" />
 
             <Button
+                android:id="@+id/btnLogin"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:layout_marginLeft="15dp"
