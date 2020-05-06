@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "513684900298",
+    "firebase_url": "https://dbsmahasiswa.firebaseio.com",
+    "project_id": "dbsmahasiswa",
+    "storage_bucket": "dbsmahasiswa.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:513684900298:android:d65829e60022433a47a733",
+        "android_client_info": {
+          "package_name": "umn.ac.tugasmobile"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "513684900298-jkp6rsvlv4d952b8sjm6uifipllgdqvk.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB--gnb_65m1qhXooxBohNSdos-zGWZvD4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "513684900298-jkp6rsvlv4d952b8sjm6uifipllgdqvk.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
