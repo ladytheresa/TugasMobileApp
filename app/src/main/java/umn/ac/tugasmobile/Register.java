@@ -21,7 +21,7 @@ import com.google.firebase.database.DatabaseReference;
 
 public class Register extends AppCompatActivity {
 
-    private Button cancel, register;
+    private Button register, cancel;
     private EditText email, password;
     private FirebaseAuth auth;
     private DatabaseReference mDatabase;

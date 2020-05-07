@@ -6,26 +6,21 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
+import android.widget.TextView;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
-    Button register, login;
+    Button login;
+    TextView register;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        register = findViewById(R.id.btnRegister);
         login = findViewById(R.id.btnLogin);
-
-        register.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent addIntent = new Intent(MainActivity.this,
-                        Register.class);
-                startActivityForResult(addIntent,1);
-            }
-        });
+        register = findViewById(R.id.tvReg);
 
         login.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -36,5 +31,16 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        register.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent addIntent = new Intent(MainActivity.this,
+                        Register.class);
+                startActivityForResult(addIntent,1);
+            }
+        });
+
     }
 }
+
+
