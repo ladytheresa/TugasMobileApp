@@ -79,6 +79,22 @@
                 android:inputType="textPersonName"/>
 
             <TextView
+                android:id="@+id/textView8"
+                android:layout_marginLeft="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Display Name: "/>
+
+            <EditText
+                android:id="@+id/etDisplayName"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textPersonName"/>
+
+            <TextView
                 android:id="@+id/textView"
                 android:layout_marginLeft="20dp"
                 android:layout_width="match_parent"
@@ -92,7 +108,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="10"
-                android:inputType="textPersonName"/>
+                android:inputType="number"/>
 
             <TextView
                 android:id="@+id/textView5"
@@ -157,22 +173,6 @@
                 android:layout_height="wrap_content"
                 android:ems="10"
                 android:inputType="phone"/>
-
-            <TextView
-                android:id="@+id/textView8"
-                android:layout_marginLeft="20dp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Display Name: "/>
-
-            <EditText
-                android:id="@+id/etDisplayName"
-                android:layout_marginLeft="15dp"
-                android:layout_marginRight="20dp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:ems="10"
-                android:inputType="textPersonName"/>
 
 
             <LinearLayout
