@@ -22,7 +22,7 @@ public class Profile extends AppCompatActivity {
 
     ImageView back,pp;
     TextView username;
-    //EditText;
+    EditText fullname,nim,angkatan,Status,Pekerjaan,nohp,domisili;
     FirebaseUser firebaseUser;
     DatabaseReference userRef;
 
@@ -34,6 +34,15 @@ public class Profile extends AppCompatActivity {
         userRef= FirebaseDatabase.getInstance().getReference("users").child(firebaseUser.getUid());
         back = findViewById(R.id.back);
         username = findViewById(R.id.username);
+        fullname = findViewById(R.id.fullname);
+        nim = findViewById(R.id.nim);
+        angkatan = findViewById(R.id.angkatan);
+        Status = findViewById(R.id.Status);
+        Pekerjaan = findViewById(R.id.Pekerjaan);
+        nohp = findViewById(R.id.nohp);
+        domisili = findViewById(R.id.domisili);
+
+
         pp = findViewById(R.id.pp);
 
         back.setOnClickListener(new View.OnClickListener() {
@@ -50,6 +59,14 @@ public class Profile extends AppCompatActivity {
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 User user = dataSnapshot.getValue(User.class);
                 username.setText(user.getDisplayName());
+                fullname.setText(user.getNamalengkap());
+                nim.setText(user.getNim());
+                angkatan.setText(user.getAngkatan());
+                Status.setText(user.getStatusPekerjaan());
+                Pekerjaan.setText(user.getPekerjaan());
+                nohp.setText(user.getNomorhp());
+                domisili.setText(user.getDomisili());
+
 
                 if(user.getProfilePic().equals("default")){
                     pp.setImageResource(R.drawable.blank);
