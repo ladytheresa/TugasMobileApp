@@ -8,125 +8,59 @@
     android:orientation="vertical"
     tools:context=".Profile">
 
-    <TableRow
-
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-        <ImageView
-            android:id="@+id/back"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:src="@drawable/back" />
-
-        <TextView
-            android:id="@+id/username"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:text="\n DISPLAY NAME"
-            android:textAlignment="center"
-            android:textSize="25sp" />
-        <ImageView
-            android:layout_width="100dp"
-            android:layout_height="80dp"
-            android:src="@drawable/blank" />
-
-    </TableRow>
-
     <ScrollView
-        android:layout_marginTop="20dp"
         android:id="@+id/listdata"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:scrollbars="vertical">
 
         <LinearLayout
+            android:layout_marginTop="10dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-
-            <LinearLayout
-                android:layout_marginTop="20dp"
+            <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
                 android:orientation="horizontal">
                 <ImageView
-                    android:layout_width="0dp"
-                    android:layout_weight="1"
-                    android:layout_height="80dp"
-                    android:layout_marginRight="15dp"
-                    android:layout_marginLeft="15dp"
-                    android:src="@drawable/blank" />
+                    android:id="@+id/back"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/back" />
 
-                <ImageView
-                    android:layout_width="0dp"
-                    android:layout_weight="1"
-                    android:layout_height="80dp"
-                    android:layout_marginRight="15dp"
-                    android:layout_marginLeft="15dp"
-                    android:src="@drawable/blank" />
+                <TextView
+                    android:layout_centerHorizontal="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Profile"
+                    android:textAlignment="center"
+                    android:textSize="40sp" />
 
-                <ImageView
-                    android:layout_width="0dp"
-                    android:layout_weight="1"
-                    android:layout_height="80dp"
-                    android:layout_marginRight="15dp"
-                    android:layout_marginLeft="15dp"
-                    android:src="@drawable/blank" />
+            </RelativeLayout>
 
-            </LinearLayout>
-
-            <LinearLayout
+            <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                android:layout_height="match_parent">
                 <TextView
-                    android:layout_width="0dp"
-                    android:layout_weight="1"
-                    android:layout_height="wrap_content"
-                    android:layout_marginRight="20dp"
-                    android:layout_marginLeft="20dp"
-                    android:text="Twitter"
-                    android:textAlignment="center"/>
-
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_weight="1"
-                    android:layout_height="wrap_content"
-                    android:layout_marginRight="20dp"
-                    android:layout_marginLeft="20dp"
-                    android:text="Facebook"
-                    android:textAlignment="center"/>
-
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_weight="1"
-                    android:layout_height="wrap_content"
-                    android:layout_marginRight="20dp"
-                    android:layout_marginLeft="20dp"
-                    android:text="Instagram"
-                    android:textAlignment="center"/>
-
-            </LinearLayout>
-
-
-            <LinearLayout
-                android:layout_marginTop="20dp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:text="\n Profile"
+                    android:id="@+id/username"
+                    android:layout_width="wrap_content"
+                    android:layout_height="80dp"
+                    android:layout_toEndOf="@id/pp"
+                    android:layout_marginTop="20dp"
+                    android:text="DISPLAY NAME"
                     android:textAlignment="center"
                     android:textSize="25sp" />
+                <ImageView
+                    android:id="@+id/pp"
+                    android:layout_width="100dp"
+                    android:layout_height="80dp"
+                    android:src="@drawable/blank" />
 
-            </LinearLayout>
+
+            </RelativeLayout>
 
             <LinearLayout
                 android:layout_marginTop="20dp"
@@ -139,14 +73,15 @@
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:text="\n Nama :"
-                    android:textSize="25sp" />
+                    android:textSize="20sp" />
 
-                <TextView
+                <EditText
                     android:id="@+id/fullname"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:textSize="25sp" />
+                    android:hint="fullname"
+                    android:textSize="20sp" />
 
             </LinearLayout>
 
@@ -159,15 +94,16 @@
                     android:layout_width="5dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:text="\n Alamat :"
-                    android:textSize="25sp" />
+                    android:text="\n NIM :"
+                    android:textSize="20sp" />
 
-                <TextView
-                    android:id="@+id/alamat"
+                <EditText
+                    android:id="@+id/nim"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:textSize="25sp" />
+                    android:hint="NIM"
+                    android:textSize="20sp" />
 
             </LinearLayout>
             <LinearLayout
@@ -180,14 +116,15 @@
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:text="\n Angkatan :"
-                    android:textSize="25sp" />
+                    android:textSize="20sp" />
 
-                <TextView
+                <EditText
                     android:id="@+id/angkatan"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:textSize="25sp" />
+                    android:hint="Angkatan"
+                    android:textSize="20sp" />
 
             </LinearLayout>
             <LinearLayout
@@ -200,14 +137,15 @@
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:text="\n Status :"
-                    android:textSize="25sp" />
+                    android:textSize="20sp" />
 
-                <TextView
+                <EditText
                     android:id="@+id/Status"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:textSize="25sp" />
+                    android:hint="Status Pekerjaan"
+                    android:textSize="20sp" />
 
             </LinearLayout>
             <LinearLayout
@@ -220,21 +158,82 @@
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:text="\n Pekerjaan :"
-                    android:textSize="25sp" />
+                    android:textSize="20sp" />
 
-                <TextView
+                <EditText
                     android:id="@+id/Pekerjaan"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:textSize="25sp" />
+                    android:hint="Pekerjaan"
+                    android:textSize="20sp" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="5dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="\n Nomor HP :"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/nohp"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:hint="nomor hp"
+                    android:textSize="20sp" />
             </LinearLayout>
 
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
 
+                <TextView
+                    android:layout_width="5dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="\n Domisili :"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/domisili"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:hint="domisili"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+                <Button
+                    android:id="@+id/btnUpdate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Update"/>
+
+                <Button
+                    android:id="@+id/btnLogout"
+                    android:layout_below="@+id/btnUpdate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Logout"/>
+            </RelativeLayout>
         </LinearLayout>
 
 
     </ScrollView>
+
+
 
 
 </LinearLayout>
