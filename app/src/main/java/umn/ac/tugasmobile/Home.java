@@ -69,7 +69,7 @@ public class Home extends AppCompatActivity {
                     User user=dataSnapshot1.getValue(User.class);
                     list.add(user);
                 }
-                UserAdapter.notifyDataSetChanged();
+                //UserAdapter.notifyDataSetChanged();
             }
 
             @Override
