@@ -2,6 +2,7 @@ package umn.ac.tugasmobile;
 
 import android.content.Context;
 import android.content.Intent;
+import android.content.res.Resources;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -52,11 +53,31 @@ public class UserAdapter extends RecyclerView.Adapter<UserAdapter.ViewHolder> {
     public class ViewHolder extends RecyclerView.ViewHolder{
         ImageView ivPicture;
         TextView tvDisplayName;
+        ImageView heartFavorite;
 
         public ViewHolder(@NonNull View itemView){
             super(itemView);
             ivPicture = itemView.findViewById(R.id.ivPicture);
             tvDisplayName = itemView.findViewById(R.id.tvDisplayName);
+            heartFavorite = itemView.findViewById(R.id.heartFavorite);
+
+            itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    User user=mUsers.get(getAdapterPosition());
+                    Intent i=new Intent(mContext, DetailUser.class);
+                    i.putExtra("angkatan",user.getAngkatan());
+                    i.putExtra("displayname",user.getDisplayName());
+                    i.putExtra("nama",user.getNamalengkap());
+                    i.putExtra("pp",user.getProfilePic());
+                    i.putExtra("nim",user.getNim());
+                    i.putExtra("status",user.getStatusPekerjaan());
+                    i.putExtra("pekerjaan",user.getPekerjaan());
+                    i.putExtra("nohp",user.getNomorhp());
+                    i.putExtra("domisili",user.getDomisili());
+                    mContext.startActivity(i);
+                }
+            });
         }
     }
 
