@@ -22,7 +22,7 @@ public class Profile extends AppCompatActivity {
 
     ImageView back,pp;
     TextView username;
-    //EditText;
+    EditText fullname,nim,angkatan,Status,Pekerjaan,nohp,domisili;
     FirebaseUser firebaseUser;
     DatabaseReference userRef;
 
@@ -35,6 +35,13 @@ public class Profile extends AppCompatActivity {
         back = findViewById(R.id.back);
         username = findViewById(R.id.username);
         pp = findViewById(R.id.pp);
+        fullname = findViewById(R.id.fullname);
+        nim = findViewById(R.id.nim);
+        angkatan = findViewById(R.id.angkatan);
+        Status = findViewById(R.id.Status);
+        Pekerjaan = findViewById(R.id.Pekerjaan);
+        nohp = findViewById(R.id.nohp);
+        domisili = findViewById(R.id.domisili);
 
         back.setOnClickListener(new View.OnClickListener() {
             @Override
