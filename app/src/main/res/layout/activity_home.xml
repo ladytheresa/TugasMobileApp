@@ -18,14 +18,14 @@
             android:layout_height="wrap_content"
             android:layout_toEndOf="@id/pp"
             android:layout_marginTop="20dp"
-            android:text="DISPLAY NAME"
+            android:text=""
             android:textAlignment="center"
             android:textSize="25sp" />
         <ImageView
             android:id="@+id/pp"
             android:layout_width="100dp"
             android:layout_height="80dp"
-            android:src="@drawable/blank" />
+             />
 
 
     </RelativeLayout>
