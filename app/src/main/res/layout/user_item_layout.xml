@@ -15,11 +15,11 @@
             android:src="@drawable/blank"/>
 
         <ImageView
-            android:id="@+id/starFavorite"
+            android:id="@+id/heartFavorite"
             android:layout_width="28dp"
             android:layout_height="28dp"
             android:src="@drawable/heart_grey"
-            android:layout_gravity="bottom|right"/>
+            android:layout_gravity="top|right"/>
 
     </FrameLayout>
 

@@ -9,9 +9,11 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
@@ -58,6 +60,7 @@ public class Home extends AppCompatActivity {
                 for(DataSnapshot dataSnapshot1: dataSnapshot.getChildren())
                 {
                     User user=dataSnapshot1.getValue(User.class);
+
                     list.add(user);
                 }
                 userAdapter.notifyDataSetChanged();
@@ -69,6 +72,7 @@ public class Home extends AppCompatActivity {
             }
         });
 
+
         userRef.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
@@ -77,6 +81,9 @@ public class Home extends AppCompatActivity {
 
                 if(user.getProfilePic().equals("default")){
                     pp.setImageResource(R.drawable.blank);
+                }
+                else{
+                    Glide.with(Home.this).load(user.getProfilePic()).into(pp);
                 }
             }
 

@@ -8,6 +8,8 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
+
 import java.util.List;
 
 import androidx.annotation.NonNull;
@@ -36,6 +38,10 @@ public class UserAdapter extends RecyclerView.Adapter<UserAdapter.ViewHolder> {
         if(user.getProfilePic().equals("default")){
             holder.ivPicture.setImageResource(R.drawable.blank);
         }
+        else{
+            Glide.with(mContext).load(user.getProfilePic()).into(holder.ivPicture);
+        }
+
     }
 
     @Override

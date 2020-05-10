@@ -41,13 +41,18 @@ public class MainActivity extends AppCompatActivity {
         login = findViewById(R.id.btnLogin);
         register = findViewById(R.id.tvReg);
 
+        FirebaseAuth.AuthStateListener authStateListener = new FirebaseAuth.AuthStateListener() {
+            @Override
+            public void onAuthStateChanged(@NonNull FirebaseAuth auth) {
+                FirebaseUser firebaseUser = auth.getCurrentUser();
+                if (firebaseUser != null) {
+                    Intent addIntent = new Intent(MainActivity.this,
+                            Home.class);
+                    startActivityForResult(addIntent,1);
 
-        if(firebaseUser!=null){
-            Intent addIntent = new Intent(MainActivity.this,
-                    Home.class);
-            startActivityForResult(addIntent,1);
-
-        }
+                }
+            }
+        };
 
         login.setOnClickListener(new View.OnClickListener() {
             @Override
