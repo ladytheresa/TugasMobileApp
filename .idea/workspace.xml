@@ -10,15 +10,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8362e289-b3b9-49f3-aa51-1bf1b14ccf2c" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4.1/executionHistory/executionHistory.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4.1/executionHistory/executionHistory.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4.1/fileHashes/fileHashes.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4.1/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/umn/ac/tugasmobile/UserAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/umn/ac/tugasmobile/UserAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/umn/ac/tugasmobile/DetailUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/umn/ac/tugasmobile/DetailUser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/umn/ac/tugasmobile/Profile.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/umn/ac/tugasmobile/Profile.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -39,21 +32,25 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_detail_user.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-2400">
+            <state relative-caret-position="-285">
               <caret line="47" column="43" lean-forward="true" selection-start-line="47" selection-start-column="43" selection-end-line="47" selection-end-column="43" />
             </state>
           </provider>
           <provider editor-type-id="android-designer2" />
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/umn/ac/tugasmobile/DetailUser.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="210">
-              <caret line="52" column="52" lean-forward="true" selection-start-line="52" selection-start-column="52" selection-end-line="52" selection-end-column="52" />
+              <caret line="60" column="25" selection-start-line="60" selection-start-column="25" selection-end-line="60" selection-end-column="25" />
+              <folding>
+                <element signature="e#2054#2199#0" expanded="true" />
+                <element signature="e#2198#2199#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -61,7 +58,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/umn/ac/tugasmobile/MainActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="304">
+            <state relative-caret-position="-371">
               <caret line="55" selection-start-line="55" selection-end-line="55" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -75,8 +72,12 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/umn/ac/tugasmobile/Profile.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="279">
-              <caret line="105" column="17" lean-forward="true" selection-start-line="91" selection-start-column="16" selection-end-line="105" selection-end-column="17" />
+            <state relative-caret-position="249">
+              <caret line="81" column="16" selection-start-line="81" selection-start-column="16" selection-end-line="81" selection-end-column="16" />
+              <folding>
+                <element signature="e#2955#3100#0" expanded="true" />
+                <element signature="e#3099#3100#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -115,7 +116,6 @@
         <option value="$PROJECT_DIR$/app/build.gradle" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_home.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_profile.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/umn/ac/tugasmobile/Profile.java" />
         <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/user_item_layout.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/umn/ac/tugasmobile/MainActivity.java" />
@@ -123,6 +123,7 @@
         <option value="$PROJECT_DIR$/app/src/main/java/umn/ac/tugasmobile/FavDB.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_detail_user.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/umn/ac/tugasmobile/UserAdapter.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/umn/ac/tugasmobile/Profile.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/umn/ac/tugasmobile/DetailUser.java" />
       </list>
     </option>
@@ -348,9 +349,9 @@
       <window_info anchor="bottom" id="Version Control" order="0" />
       <window_info anchor="bottom" id="Logcat" order="1" sideWeight="0.49959514" weight="0.3285968" />
       <window_info anchor="bottom" id="TODO" order="2" />
-      <window_info anchor="bottom" id="Terminal" order="3" sideWeight="0.48906884" weight="0.24866785" />
-      <window_info anchor="bottom" id="Event Log" order="4" sideWeight="0.25020242" side_tool="true" visible="true" weight="0.30017763" />
-      <window_info anchor="bottom" id="Build" order="5" sideWeight="0.7497976" visible="true" weight="0.30017763" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="3" sideWeight="0.4882591" visible="true" weight="0.24866785" />
+      <window_info anchor="bottom" id="Event Log" order="4" sideWeight="0.51174086" side_tool="true" visible="true" weight="0.24866785" />
+      <window_info anchor="bottom" id="Build" order="5" sideWeight="0.7497976" weight="0.30017763" />
       <window_info anchor="bottom" id="Android Profiler" order="6" />
       <window_info anchor="bottom" id="Run" order="7" sideWeight="0.6251012" weight="0.3285968" />
       <window_info anchor="bottom" id="Debug" order="8" sideWeight="0.63724697" weight="0.37655416" />
@@ -360,7 +361,7 @@
       <window_info anchor="right" id="Gradle" order="2" />
       <window_info anchor="right" id="Theme Preview" order="3" />
       <window_info anchor="right" id="Palette&#9;" order="4" />
-      <window_info active="true" anchor="right" id="Preview" order="5" visible="true" weight="0.31093118" />
+      <window_info anchor="right" id="Preview" order="5" weight="0.31093118" />
     </layout>
   </component>
   <component name="VcsManagerConfiguration">
@@ -539,9 +540,28 @@
       </provider>
       <provider editor-type-id="android-designer2" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_detail_user.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-285">
+          <caret line="47" column="43" lean-forward="true" selection-start-line="47" selection-start-column="43" selection-end-line="47" selection-end-column="43" />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/umn/ac/tugasmobile/Profile.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="249">
+          <caret line="81" column="16" selection-start-line="81" selection-start-column="16" selection-end-line="81" selection-end-column="16" />
+          <folding>
+            <element signature="e#2955#3100#0" expanded="true" />
+            <element signature="e#3099#3100#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/umn/ac/tugasmobile/MainActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
+        <state relative-caret-position="-371">
           <caret line="55" selection-start-line="55" selection-end-line="55" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -551,27 +571,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/umn/ac/tugasmobile/Profile.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="279">
-          <caret line="105" column="17" lean-forward="true" selection-start-line="91" selection-start-column="16" selection-end-line="105" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/umn/ac/tugasmobile/DetailUser.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
-          <caret line="52" column="52" lean-forward="true" selection-start-line="52" selection-start-column="52" selection-end-line="52" selection-end-column="52" />
+          <caret line="60" column="25" selection-start-line="60" selection-start-column="25" selection-end-line="60" selection-end-column="25" />
+          <folding>
+            <element signature="e#2054#2199#0" expanded="true" />
+            <element signature="e#2198#2199#0" expanded="true" />
+          </folding>
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_detail_user.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2400">
-          <caret line="47" column="43" lean-forward="true" selection-start-line="47" selection-start-column="43" selection-end-line="47" selection-end-column="43" />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2" />
     </entry>
   </component>
   <component name="masterDetails">

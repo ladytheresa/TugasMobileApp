@@ -58,9 +58,7 @@ public class DetailUser extends AppCompatActivity {
         back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent addIntent = new Intent(DetailUser.this,
-                        Home.class);
-                startActivityForResult(addIntent,1);
+                finish();
             }
         });
 
