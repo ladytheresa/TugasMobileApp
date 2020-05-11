@@ -6,11 +6,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".Home">
+    tools:context=".Home"
+    android:background="@color/colorBack">
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:background="@color/purple">
 
         <TextView
             android:id="@+id/username"
@@ -20,8 +22,10 @@
             android:layout_marginTop="20dp"
             android:text=""
             android:textAlignment="center"
+            android:textColor="@color/white"
             android:textSize="25sp" />
         <ImageView
+            android:layout_margin="10dp"
             android:id="@+id/pp"
             android:layout_width="100dp"
             android:layout_height="80dp"
@@ -31,18 +35,32 @@
     </RelativeLayout>
 
     <ScrollView
-        android:layout_marginTop="20dp"
         android:id="@+id/listdata"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:scrollbars="vertical">
-
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/rvUser"
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            />
+            android:layout_height="match_parent">
+            <Button
+                android:id="@+id/favlist"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/blue"
+                android:textColor="@color/white"
+                android:text="Your Favorites"
+                android:textStyle="bold"
+                android:stateListAnimator="@null"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvUser"
+                android:layout_marginTop="20dp"
+                android:layout_below="@+id/favlist"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                />
+
+        </RelativeLayout>
 
     </ScrollView>
-
 </LinearLayout>

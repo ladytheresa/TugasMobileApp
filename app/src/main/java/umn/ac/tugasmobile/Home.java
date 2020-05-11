@@ -1,5 +1,6 @@
 package umn.ac.tugasmobile;
 
+import androidx.activity.OnBackPressedCallback;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.GridLayoutManager;
@@ -10,8 +11,10 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
 import com.google.firebase.auth.FirebaseAuth;
@@ -33,6 +36,7 @@ public class Home extends AppCompatActivity {
     DatabaseReference databaseReference, userRef;
     List<User> list =new ArrayList<>();
     Context context;
+    Button favoritelist;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,6 +44,7 @@ public class Home extends AppCompatActivity {
         setContentView(R.layout.activity_home);
         profile = findViewById(R.id.username);
         pp = findViewById(R.id.pp);
+        favoritelist = findViewById(R.id.favlist);
 
         recyclerView=findViewById(R.id.rvUser);
         recyclerView.setHasFixedSize(true);
@@ -48,8 +53,17 @@ public class Home extends AppCompatActivity {
 
         final UserAdapter userAdapter=new UserAdapter(this, list);
         recyclerView.setAdapter(userAdapter);
-
         firebaseUser = FirebaseAuth.getInstance().getCurrentUser();
+
+        if (firebaseUser == null) {
+            Toast.makeText(Home.this, "Welcome, please log in or register",
+                    Toast.LENGTH_SHORT).show();
+            Intent addIntent = new Intent(Home.this,
+                    MainActivity.class);
+            startActivityForResult(addIntent,1);
+        }
+
+
         userRef= FirebaseDatabase.getInstance().getReference("users").child(firebaseUser.getUid());
 
         databaseReference= FirebaseDatabase.getInstance().getReference("users");
@@ -107,6 +121,15 @@ public class Home extends AppCompatActivity {
             public void onClick(View view) {
                 Intent addIntent = new Intent(Home.this,
                         Profile.class);
+                startActivityForResult(addIntent,1);
+            }
+        });
+
+        favoritelist.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent addIntent = new Intent(Home.this,
+                        FavoriteActivity.class);
                 startActivityForResult(addIntent,1);
             }
         });

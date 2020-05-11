@@ -1,10 +1,12 @@
 package umn.ac.tugasmobile;
 
+import androidx.activity.OnBackPressedCallback;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -13,11 +15,13 @@ import com.bumptech.glide.Glide;
 public class DetailUser extends AppCompatActivity {
 
     TextView namalengkap, tvdisplay, tvangkatan, tvnim, tvstatus, tvpekerjaan,tvnohp,tvdomisili;
-    ImageView ivpp, back;
+    ImageView ivpp, back, btnFavorite;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detail_user);
+
         final Intent i=getIntent();
         namalengkap = findViewById(R.id.fullname);
         tvdisplay = findViewById(R.id.username);
@@ -29,6 +33,7 @@ public class DetailUser extends AppCompatActivity {
         tvnohp = findViewById(R.id.nohp);
         tvdomisili = findViewById(R.id.domisili);
         back = findViewById(R.id.back);
+        btnFavorite = findViewById(R.id.btnFavorite);
 
         String nama=i.getStringExtra("nama");
         String displayname=i.getStringExtra("displayname");
@@ -61,6 +66,22 @@ public class DetailUser extends AppCompatActivity {
                 finish();
             }
         });
+
+        btnFavorite.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+            }
+
+        });
+
+    }
+    public void simpanData(View view){
+        String fnama = namalengkap.getText().toString();
+        String fnohp = tvnohp.getText().toString();
+            Intent intentJawab = new Intent();
+            FavoriteList fav = new FavoriteList(fnama, fnohp);
+            intentJawab.putExtra("FAVORITE",fav);
+            setResult(RESULT_OK,intentJawab);
 
     }
 }

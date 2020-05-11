@@ -129,10 +129,10 @@ public class Profile extends AppCompatActivity {
 
                 FirebaseAuth.getInstance().signOut();
                 Toast.makeText(Profile.this, "Logged out",Toast.LENGTH_SHORT).show();
+                finishAffinity();
                 Intent addIntent = new Intent(Profile.this,
                         MainActivity.class);
                 startActivityForResult(addIntent,1);
-                finish();
                 return;
             }
         });
