@@ -16,20 +16,20 @@ import androidx.annotation.NonNull;
 public class FavoriteListAdapter extends
         RecyclerView.Adapter<FavoriteListAdapter.FavoriteListViewHolder> {
 
-    private final LayoutInflater mInflater;
-    private List<FavoriteList> daftarFavorite = new ArrayList<>();
+    private List<FavoriteList> daftarFavorite;
+    private Context context;
 
-    public FavoriteListAdapter(Context context) {
-        mInflater = LayoutInflater.from(context);
+    public FavoriteListAdapter(Context context, List<FavoriteList> daftarFavorite) {
+        this.daftarFavorite= daftarFavorite;
+        this.context=context;
     }
 
     @NonNull
     @Override
     public FavoriteListViewHolder onCreateViewHolder(@NonNull
                                                           ViewGroup parent, int viewType){
-        View itemView = mInflater.inflate(R.layout.fav_item_layout,
-                parent, false);
-        return new FavoriteListViewHolder(itemView);
+        View itemView = LayoutInflater.from(context).inflate(R.layout.fav_item_layout,parent,false);
+        return new FavoriteListAdapter.FavoriteListViewHolder(itemView);
     }
 
     @Override
@@ -63,14 +63,14 @@ public class FavoriteListAdapter extends
         notifyDataSetChanged();
     }
 
-    class FavoriteListViewHolder extends RecyclerView.ViewHolder{
-        private final TextView favnama;
-        private final TextView favhp;
+    public class FavoriteListViewHolder extends RecyclerView.ViewHolder{
+        TextView favnama;
+        TextView favhp;
 
         public FavoriteListViewHolder(@NonNull View itemView){
             super(itemView);
-            favnama = itemView.findViewById(R.id.fav_namalengkap);
-            favhp = itemView.findViewById(R.id.fav_nohp);
+            favnama = itemView.findViewById(R.id.favnama);
+            favhp = itemView.findViewById(R.id.favhp);
         }
     }
 

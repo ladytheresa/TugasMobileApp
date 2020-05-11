@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/colorBack"
     android:orientation="vertical"
-    tools:context=".Home"
-    android:background="@color/colorBack">
+    tools:context=".Home">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -18,18 +17,18 @@
             android:id="@+id/username"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_toEndOf="@id/pp"
             android:layout_marginTop="20dp"
+            android:layout_toEndOf="@id/pp"
             android:text=""
             android:textAlignment="center"
             android:textColor="@color/white"
             android:textSize="25sp" />
+
         <ImageView
-            android:layout_margin="10dp"
             android:id="@+id/pp"
             android:layout_width="100dp"
             android:layout_height="80dp"
-             />
+            android:layout_margin="10dp" />
 
 
     </RelativeLayout>
@@ -39,26 +38,50 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:scrollbars="vertical">
+
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
-            <Button
-                android:id="@+id/favlist"
+
+            <TextView
+                android:id="@+id/currentstatus"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@color/blue"
+                android:stateListAnimator="@null"
+                android:textAlignment="center"
+                android:text="Your current status"
+                android:textSize="20sp"
                 android:textColor="@color/white"
-                android:text="Your Favorites"
-                android:textStyle="bold"
-                android:stateListAnimator="@null"/>
+                android:textStyle="bold" />
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/rvUser"
-                android:layout_marginTop="20dp"
-                android:layout_below="@+id/favlist"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                />
+                android:layout_below="@+id/currentstatus"
+                android:layout_marginTop="20dp" />
+
+            <EditText
+                android:layout_below="@id/rvUser"
+                android:id="@+id/userstatus"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter your new status!"
+                android:textColorHint="@color/white"
+                android:background="@drawable/edittext_background2"
+                android:textColor="@color/colorTitleWhite"
+                android:textSize="18sp"
+                android:textStyle="normal"/>
+            <Button
+                android:layout_below="@id/userstatus"
+                android:id="@+id/updateStatus"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/btn_login"
+                android:textColor="@color/white"
+                android:text="Update now!"
+                android:textStyle="bold" />
 
         </RelativeLayout>
 

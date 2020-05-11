@@ -21,9 +21,7 @@ public abstract class FavoriteRoomDatabase extends RoomDatabase {
         if (INSTANCE == null) {
             synchronized (FavoriteRoomDatabase.class) {
                 if (INSTANCE == null) {
-                    INSTANCE = Room.databaseBuilder(
-                            context.getApplicationContext(),
-                            FavoriteRoomDatabase.class, "dbFavorite")
+                    INSTANCE = Room.databaseBuilder(context.getApplicationContext(), FavoriteRoomDatabase.class, "dbFavorite")
                             .addCallback(sRoomDatabaseCallback)
                             .build();
                 }

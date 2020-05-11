@@ -59,26 +59,8 @@ public class UserAdapter extends RecyclerView.Adapter<UserAdapter.ViewHolder> {
             super(itemView);
             ivPicture = itemView.findViewById(R.id.ivPicture);
             tvDisplayName = itemView.findViewById(R.id.tvDisplayName);
-            heartFavorite = itemView.findViewById(R.id.heart);
 
-            ivPicture.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    User user=mUsers.get(getAdapterPosition());
-                    Intent i=new Intent(mContext, DetailUser.class);
-                    i.putExtra("angkatan",user.getAngkatan());
-                    i.putExtra("displayname",user.getDisplayName());
-                    i.putExtra("nama",user.getNamalengkap());
-                    i.putExtra("pp",user.getProfilePic());
-                    i.putExtra("nim",user.getNim());
-                    i.putExtra("status",user.getStatusPekerjaan());
-                    i.putExtra("pekerjaan",user.getPekerjaan());
-                    i.putExtra("nohp",user.getNomorhp());
-                    i.putExtra("domisili",user.getDomisili());
-                    mContext.startActivity(i);
-                }
-            });
-            tvDisplayName.setOnClickListener(new View.OnClickListener() {
+            itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     User user=mUsers.get(getAdapterPosition());

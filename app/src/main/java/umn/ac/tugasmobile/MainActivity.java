@@ -46,7 +46,7 @@ public class MainActivity extends AppCompatActivity {
         if (firebaseUser != null) {
             Intent addIntent = new Intent(MainActivity.this,
                     Home.class);
-            startActivityForResult(addIntent,1);
+            startActivityForResult(addIntent, 1);
         }
 
         login.setOnClickListener(new View.OnClickListener() {
@@ -75,7 +75,7 @@ public class MainActivity extends AppCompatActivity {
                                     FirebaseUser user = mAuth.getCurrentUser();
                                     Intent addIntent = new Intent(MainActivity.this,
                                             Home.class);
-                                    startActivityForResult(addIntent,1);
+                                    startActivityForResult(addIntent, 1);
 
                                 } else {
                                     // If sign in fails, display a message to the user.
@@ -93,7 +93,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Intent addIntent = new Intent(MainActivity.this,
                         Register.class);
-                startActivityForResult(addIntent,1);
+                startActivityForResult(addIntent, 1);
             }
         });
 

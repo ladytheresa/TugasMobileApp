@@ -11,8 +11,11 @@ import java.io.Serializable;
 public class FavoriteList implements Serializable {
     @PrimaryKey
     @NonNull
-    @ColumnInfo(name = "nama_lengkap") private String nama_lengkap;
-    @ColumnInfo(name = "nomor_hp") private String nomor_hp;
+    @ColumnInfo(name = "nama_lengkap")
+    private String nama_lengkap;
+
+    @ColumnInfo(name = "nomor_hp")
+    private String nomor_hp;
 
     public FavoriteList(String nama_lengkap, String nomor_hp) {
         this.nama_lengkap = nama_lengkap;
