@@ -6,4 +6,15 @@
     <color name="purple">#564999</color>
     <color name="blue">#59b7e0</color>
     <color name="white">#ffffff</color>
+    <color name="gray">#443737 </color>
+    <color name="blue1">#3792cb</color>
+    <color name="teal">#008080</color>
+    <color name="black">#000000</color>
+    <color name="darkBlue">#0e2433</color>
+    <color name="colorLayerBack">#3792cb</color>
+    <color name="colorBack">#1c4966</color>
+    <color name="colorTitle">#362742</color>
+    <color name="colorSubTitle">#c5c9cf</color>
+    <color name="colorTitleWhite">#ffffff</color>
+    <color name="colorSubTitleWhite">#b795ce</color>
 </resources>

@@ -10,175 +10,181 @@
     android:background="@color/purple"
     tools:context=".Register">
 
-    <LinearLayout
+    <ScrollView
         android:layout_width="350dp"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Register"
-            android:textSize="40dp"
-            android:textColor="@color/white"
-            android:textStyle="bold" />
-
-        <EditText
-            android:id="@+id/etEmail"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textSize="14dp"
-            android:hint="Alamat Email (Required):"
-            android:textColorHint="@color/white"
-            android:background="@drawable/edittext_background"
-            android:inputType="textEmailAddress"
-            android:textColor="@color/white"/>
-
-        <EditText
-            android:id="@+id/etPassword"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textSize="14dp"
-            android:hint="Password (Required):"
-            android:layout_marginTop="10dp"
-            android:textColorHint="@color/white"
-            android:background="@drawable/edittext_background"
-            android:inputType="textPassword"
-            android:textColor="@color/white"/>
-
-        <EditText
-            android:id="@+id/etNama"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textSize="14dp"
-            android:hint="Nama Lengkap"
-            android:layout_marginTop="10dp"
-            android:textColorHint="@color/white"
-            android:background="@drawable/edittext_background"
-            android:inputType="textPersonName"
-            android:textColor="@color/white"/>
-
-        <EditText
-            android:id="@+id/etDisplayName"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textSize="14dp"
-            android:hint="Display Name"
-            android:layout_marginTop="10dp"
-            android:textColorHint="@color/white"
-            android:background="@drawable/edittext_background"
-            android:inputType="textPersonName"
-            android:textColor="@color/white" />
-
-        <EditText
-            android:id="@+id/etNIM"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textSize="14dp"
-            android:hint="NIM"
-            android:layout_marginTop="10dp"
-            android:textColorHint="@color/white"
-            android:background="@drawable/edittext_background"
-            android:inputType="textPersonName"
-            android:textColor="@color/white"/>
-
-        <EditText
-            android:id="@+id/etAngkatan"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textSize="14dp"
-            android:hint="Angkatan"
-            android:layout_marginTop="10dp"
-            android:textColorHint="@color/white"
-            android:background="@drawable/edittext_background"
-            android:inputType="textPersonName"
-            android:textColor="@color/white"/>
-
-        <EditText
-            android:id="@+id/etPekerjaan"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textSize="14dp"
-            android:hint="Pekerjaan"
-            android:layout_marginTop="10dp"
-            android:textColorHint="@color/white"
-            android:background="@drawable/edittext_background"
-            android:inputType="textPersonName"
-            android:textColor="@color/white"/>
-
-        <EditText
-            android:id="@+id/etStatus"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textSize="14dp"
-            android:hint="Status Pekerjaan"
-            android:layout_marginTop="10dp"
-            android:textColorHint="@color/white"
-            android:background="@drawable/edittext_background"
-            android:inputType="textPersonName"
-            android:textColor="@color/white"/>
-
-        <EditText
-            android:id="@+id/etDomisili"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textSize="14dp"
-            android:hint="Domisili"
-            android:layout_marginTop="10dp"
-            android:textColorHint="@color/white"
-            android:background="@drawable/edittext_background"
-            android:inputType="textPersonName"
-            android:textColor="@color/white"/>
-
-        <EditText
-            android:id="@+id/etNomorHp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textSize="14dp"
-            android:hint="Nomor HP"
-            android:layout_marginTop="10dp"
-            android:layout_marginBottom="20dp"
-            android:textColorHint="@color/white"
-            android:background="@drawable/edittext_background"
-            android:inputType="phone"
-            android:textColor="@color/white"/>
-
-
+        android:layout_height="wrap_content">
 
         <LinearLayout
-            android:layout_marginLeft="20dp"
-            android:layout_marginRight="20dp"
-            android:layout_width="match_parent"
-            android:layout_height="50dp">
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
-            <Button
-                android:id="@+id/btnRegister"
-                android:layout_width="wrap_content"
+            <TextView
+                android:fontFamily="@font/fontjudul"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:background="@drawable/btn_login"
-                android:textColor="@color/white"
-                android:textSize="14dp"
                 android:text="Register"
-                android:textStyle="bold"
-                android:textAllCaps="false"
-                android:layout_gravity="center"
-                android:stateListAnimator="@null"/>
-            <Button
-                android:id="@+id/btnCancel"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:background="@drawable/btn_login"
+                android:textSize="40dp"
                 android:textColor="@color/white"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/etEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:textSize="14dp"
-                android:text="Cancel"
-                android:textStyle="bold"
-                android:textAllCaps="false"
-                android:layout_gravity="center"
-                android:stateListAnimator="@null"/>
+                android:hint="Alamat Email (Required)"
+                android:textColorHint="@color/white"
+                android:background="@drawable/edittext_background"
+                android:inputType="textEmailAddress"
+                android:textColor="@color/white"/>
+
+            <EditText
+                android:id="@+id/etPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="14dp"
+                android:hint="Password (Required)"
+                android:layout_marginTop="10dp"
+                android:textColorHint="@color/white"
+                android:background="@drawable/edittext_background"
+                android:inputType="textPassword"
+                android:textColor="@color/white"/>
+
+            <EditText
+                android:id="@+id/etNama"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="14dp"
+                android:hint="Nama Lengkap"
+                android:layout_marginTop="10dp"
+                android:textColorHint="@color/white"
+                android:background="@drawable/edittext_background"
+                android:inputType="textPersonName"
+                android:textColor="@color/white"/>
+
+            <EditText
+                android:id="@+id/etDisplayName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="14dp"
+                android:hint="Display Name"
+                android:layout_marginTop="10dp"
+                android:textColorHint="@color/white"
+                android:background="@drawable/edittext_background"
+                android:inputType="textPersonName"
+                android:textColor="@color/white" />
+
+            <EditText
+                android:id="@+id/etNIM"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="14dp"
+                android:hint="NIM"
+                android:layout_marginTop="10dp"
+                android:textColorHint="@color/white"
+                android:background="@drawable/edittext_background"
+                android:inputType="textPersonName"
+                android:textColor="@color/white"/>
+
+            <EditText
+                android:id="@+id/etAngkatan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="14dp"
+                android:hint="Angkatan"
+                android:layout_marginTop="10dp"
+                android:textColorHint="@color/white"
+                android:background="@drawable/edittext_background"
+                android:inputType="textPersonName"
+                android:textColor="@color/white"/>
+
+            <EditText
+                android:id="@+id/etPekerjaan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="14dp"
+                android:hint="Pekerjaan (Wiraswasta/Freelancer/lainnya)"
+                android:layout_marginTop="10dp"
+                android:textColorHint="@color/white"
+                android:background="@drawable/edittext_background"
+                android:inputType="textPersonName"
+                android:textColor="@color/white"/>
+
+            <EditText
+                android:id="@+id/etStatus"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="14dp"
+                android:hint="Status Pekerjaan (Bekerja/Belum Bekerja/Pensiun)"
+                android:layout_marginTop="10dp"
+                android:textColorHint="@color/white"
+                android:background="@drawable/edittext_background"
+                android:inputType="textPersonName"
+                android:textColor="@color/white"/>
+
+            <EditText
+                android:id="@+id/etDomisili"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="14dp"
+                android:hint="Domisili"
+                android:layout_marginTop="10dp"
+                android:textColorHint="@color/white"
+                android:background="@drawable/edittext_background"
+                android:inputType="textPersonName"
+                android:textColor="@color/white"/>
+
+            <EditText
+                android:id="@+id/etNomorHp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="14dp"
+                android:hint="Nomor HP"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="20dp"
+                android:textColorHint="@color/white"
+                android:background="@drawable/edittext_background"
+                android:inputType="phone"
+                android:textColor="@color/white"/>
+
+            <LinearLayout
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <Button
+                    android:id="@+id/btnRegister"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/btn_login"
+                    android:textColor="@color/white"
+                    android:textSize="14dp"
+                    android:text="Register"
+                    android:textStyle="bold"
+                    android:textAllCaps="false"
+                    android:layout_gravity="center"
+                    android:stateListAnimator="@null"/>
+                <Button
+                    android:id="@+id/btnCancel"
+                    android:layout_below="@+id/btnRegister"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/btn_login"
+                    android:textColor="@color/white"
+                    android:textSize="14dp"
+                    android:text="Cancel"
+                    android:textStyle="bold"
+                    android:textAllCaps="false"
+                    android:layout_gravity="center"
+                    android:stateListAnimator="@null"/>
+            </LinearLayout>
+
         </LinearLayout>
 
-    </LinearLayout>
+    </ScrollView>
 
 </RelativeLayout>
