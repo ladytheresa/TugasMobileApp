@@ -51,7 +51,8 @@
                 android:stateListAnimator="@null"
                 android:textAlignment="center"
                 android:text="Your current status"
-                android:textSize="20sp"
+                android:textSize="18sp"
+                android:padding="10dp"
                 android:textColor="@color/white"
                 android:textStyle="bold" />
 

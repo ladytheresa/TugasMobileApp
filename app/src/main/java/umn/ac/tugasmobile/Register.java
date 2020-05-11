@@ -83,42 +83,46 @@ public class Register extends AppCompatActivity {
                         .addOnCompleteListener(Register.this, new OnCompleteListener<AuthResult>() {
                             @Override
                             public void onComplete(@NonNull Task<AuthResult> task) {
-                                Toast.makeText(Register.this, "User successfully registered! You can now log in!", Toast.LENGTH_SHORT).show();
-                                firebaseUser = FirebaseAuth.getInstance().getCurrentUser();
-                                String uid = firebaseUser.getUid();
+                                if(task.isSuccessful()) {
+                                    Toast.makeText(Register.this, "User successfully registered! You can now log in!", Toast.LENGTH_SHORT).show();
+                                    firebaseUser = FirebaseAuth.getInstance().getCurrentUser();
+                                    String uid = firebaseUser.getUid();
 
-                                mDatabase = FirebaseDatabase.getInstance().getReference("users").child(uid);
-                                HashMap<String, String> hashMap = new HashMap<>();
-                                hashMap.put("uid",uid);
-                                hashMap.put("nim",nim);
-                                hashMap.put("displayname",displayname);
-                                hashMap.put("namalengkap",namalengkap);
-                                hashMap.put("domisili",domisili);
-                                hashMap.put("angkatan",angkatan);
-                                hashMap.put("email",email);
-                                hashMap.put("nomorhp",nohp);
-                                hashMap.put("pekerjaan",pekerjaan);
-                                hashMap.put("profilepic",profilepic);
-                                hashMap.put("statuspekerjaan",statuspekerjaan);
+                                    mDatabase = FirebaseDatabase.getInstance().getReference("users").child(uid);
+                                    HashMap<String, String> hashMap = new HashMap<>();
+                                    hashMap.put("uid", uid);
+                                    hashMap.put("nim", nim);
+                                    hashMap.put("displayname", displayname);
+                                    hashMap.put("namalengkap", namalengkap);
+                                    hashMap.put("domisili", domisili);
+                                    hashMap.put("angkatan", angkatan);
+                                    hashMap.put("email", email);
+                                    hashMap.put("nomorhp", nohp);
+                                    hashMap.put("pekerjaan", pekerjaan);
+                                    hashMap.put("profilepic", profilepic);
+                                    hashMap.put("statuspekerjaan", statuspekerjaan);
 
                                     mDatabase.setValue(hashMap).addOnCompleteListener(new OnCompleteListener<Void>() {
                                         @Override
                                         public void onComplete(@NonNull Task<Void> task) {
-                                            if(task.isSuccessful()){
+                                            if (task.isSuccessful()) {
+                                                FirebaseAuth.getInstance().signOut();
                                                 startActivity(new Intent(Register.this, MainActivity.class));
                                                 finish();
-                                            }
-                                            else {
-                                                Toast.makeText(Register.this, "Register fail!" + task.getException(),
+                                            } else {
+                                                Toast.makeText(Register.this, "Something went wrong! Please try again!",
                                                         Toast.LENGTH_SHORT).show();
                                             }
                                         }
                                     });
-
+                                }
                                 // If sign in fails, display a message to the user. If sign in succeeds
                                 // the auth state listener will be notified and logic to handle the
                                 // signed in user can be handled in the listener.
-
+                                else{
+                                    Toast.makeText(Register.this, "Register fail! Please try again with different credentials",
+                                            Toast.LENGTH_SHORT).show();
+                                }
                             }
                         });
 

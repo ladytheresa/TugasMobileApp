@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.ContentProviderOperation;
 import android.content.Intent;
+import android.content.OperationApplicationException;
 import android.os.Bundle;
 import android.provider.ContactsContract;
 import android.util.Log;
@@ -90,7 +91,6 @@ public class DetailUser extends AppCompatActivity {
                         .withValue(ContactsContract.RawContacts.ACCOUNT_NAME, null)
                         .build());
 
-                //------------------------------------------------------ Names
                 if (fnama != null) {
                     ops.add(ContentProviderOperation.newInsert(
                             ContactsContract.Data.CONTENT_URI)
@@ -102,7 +102,6 @@ public class DetailUser extends AppCompatActivity {
                                     fnama).build());
                 }
 
-                //------------------------------------------------------ Mobile Number
                 if (fnohp != null) {
                     ops.add(ContentProviderOperation.
                             newInsert(ContactsContract.Data.CONTENT_URI)

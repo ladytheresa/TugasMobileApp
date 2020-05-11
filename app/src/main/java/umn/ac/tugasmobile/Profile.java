@@ -174,6 +174,8 @@ public class Profile extends AppCompatActivity {
                                 if(task.isSuccessful()){
                                     Toast.makeText(Profile.this, "Update data successful!",
                                             Toast.LENGTH_SHORT).show();
+                                    finish();
+                                    startActivity(getIntent());
                                 }
                                 else {
                                     Toast.makeText(Profile.this, "Update fail!" + task.getException(),
@@ -262,6 +264,7 @@ public class Profile extends AppCompatActivity {
 
             }else{
                 uploadImage();
+
             }
 
         }
