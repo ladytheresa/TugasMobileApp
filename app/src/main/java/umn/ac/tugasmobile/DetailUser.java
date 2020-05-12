@@ -5,8 +5,11 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.ContentProviderOperation;
+import android.content.Context;
 import android.content.Intent;
 import android.content.OperationApplicationException;
+import android.database.Cursor;
+import android.net.Uri;
 import android.os.Bundle;
 import android.provider.ContactsContract;
 import android.util.Log;
@@ -91,6 +94,7 @@ public class DetailUser extends AppCompatActivity {
                         .withValue(ContactsContract.RawContacts.ACCOUNT_NAME, null)
                         .build());
 
+
                 if (fnama != null) {
                     ops.add(ContentProviderOperation.newInsert(
                             ContactsContract.Data.CONTENT_URI)
@@ -116,8 +120,13 @@ public class DetailUser extends AppCompatActivity {
 
                 // Asking the Contact provider to create a new contact
                 try {
-                    getContentResolver().applyBatch(ContactsContract.AUTHORITY, ops);
-                    Toast.makeText(DetailUser.this, "Succesfully added to contact!", Toast.LENGTH_SHORT).show();
+                    if(contactExists(DetailUser.this,fnohp)==true){
+                        Toast.makeText(DetailUser.this, "Contact already exists!", Toast.LENGTH_SHORT).show();
+                    }
+                    else{
+                        getContentResolver().applyBatch(ContactsContract.AUTHORITY, ops);
+                        Toast.makeText(DetailUser.this, "Succesfully added to contact!", Toast.LENGTH_SHORT).show();
+                    }
 
                 } catch (Exception e) {
                     e.printStackTrace();
@@ -127,5 +136,21 @@ public class DetailUser extends AppCompatActivity {
             }
         });
 
+    }
+    public boolean contactExists(Context context, String number) {
+//  number is the phone number
+        Uri lookupUri = Uri.withAppendedPath(ContactsContract.PhoneLookup.CONTENT_FILTER_URI, Uri.encode(number));
+
+        String[] mPhoneNumberProjection = {ContactsContract.PhoneLookup._ID, ContactsContract.PhoneLookup.NUMBER, ContactsContract.PhoneLookup.DISPLAY_NAME};
+        Cursor cur = context.getContentResolver().query(lookupUri, mPhoneNumberProjection, null, null, null);
+        try {
+            if (cur.moveToFirst()) {
+                return true;
+            }
+        } finally {
+            if (cur != null)
+                cur.close();
+        }
+        return false;
     }
 }
