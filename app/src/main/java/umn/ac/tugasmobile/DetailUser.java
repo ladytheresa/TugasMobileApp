@@ -9,6 +9,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.OperationApplicationException;
 import android.database.Cursor;
+import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.os.Bundle;
 import android.provider.ContactsContract;
@@ -35,7 +36,6 @@ public class DetailUser extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detail_user);
-
         final Intent i = getIntent();
         namalengkap = findViewById(R.id.fullname);
         tvdisplay = findViewById(R.id.username);
@@ -47,6 +47,11 @@ public class DetailUser extends AppCompatActivity {
         tvnohp = findViewById(R.id.nohp);
         tvdomisili = findViewById(R.id.domisili);
         back = findViewById(R.id.back);
+
+        String uri = "@drawable/heart_grey";
+        String uri2 = "@drawable/heart_red";
+        int imageResource1 = getResources().getIdentifier(uri, null, getPackageName());
+        int imageResource2 = getResources().getIdentifier(uri2, null, getPackageName());
 
         String nama = i.getStringExtra("nama");
         String displayname = i.getStringExtra("displayname");
@@ -66,6 +71,15 @@ public class DetailUser extends AppCompatActivity {
         tvpekerjaan.setText(pekerjaan);
         tvnohp.setText(nohp);
         tvdomisili.setText(domisili);
+        FloatingActionButton fab = findViewById(R.id.fab);
+
+        if(contactExists(DetailUser.this,nohp)==false){
+            Drawable res1 = getResources().getDrawable(imageResource1);//grey
+            fab.setImageDrawable(res1);
+        }else{
+            Drawable res2 = getResources().getDrawable(imageResource2);//red
+            fab.setImageDrawable(res2);
+        }
 
         if (pp.equals("default")) {
             ivpp.setImageResource(R.drawable.blank);
@@ -80,7 +94,6 @@ public class DetailUser extends AppCompatActivity {
         });
 
 
-        FloatingActionButton fab = findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -119,13 +132,15 @@ public class DetailUser extends AppCompatActivity {
                 }
 
                 // Asking the Contact provider to create a new contact
-                try {g
+                try {
                     if(contactExists(DetailUser.this,fnohp)==true){
                         Toast.makeText(DetailUser.this, "Contact already exists!", Toast.LENGTH_SHORT).show();
                     }
                     else{
                         getContentResolver().applyBatch(ContactsContract.AUTHORITY, ops);
                         Toast.makeText(DetailUser.this, "Succesfully added to contact!", Toast.LENGTH_SHORT).show();
+                        finish();
+                        startActivity(getIntent());
                     }
 
                 } catch (Exception e) {
