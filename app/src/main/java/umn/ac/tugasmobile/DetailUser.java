@@ -119,7 +119,7 @@ public class DetailUser extends AppCompatActivity {
                 }
 
                 // Asking the Contact provider to create a new contact
-                try {
+                try {g
                     if(contactExists(DetailUser.this,fnohp)==true){
                         Toast.makeText(DetailUser.this, "Contact already exists!", Toast.LENGTH_SHORT).show();
                     }
